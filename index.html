@@ -29,6 +29,8 @@
     .btn-outline:hover{background:var(--accent);color:#fff}
     header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);backdrop-filter:saturate(120%) blur(6px);border-bottom:1px solid var(--border)}
     .logo{display:grid;place-items:center;width:36px;height:36px;border-radius:12px;background:var(--accent);color:#fff;font-weight:800}
+    .logo-img{height:72px;width:auto;display:block;border-radius:8px}
+    .logo-fallback{display:none}
     h1{font-size:clamp(2rem,3.8vw,3rem);line-height:1.1;margin:0}
     h2{font-size:clamp(1.5rem,2.6vw,2rem);margin:0}
     p{color:var(--muted)}
@@ -57,8 +59,8 @@
   <header>
     <div class="container" style="display:flex;align-items:center;justify-content:space-between;padding:12px 16px;">
       <div style="display:flex;align-items:center;gap:10px">
-        <div class="logo">C</div>
-        <strong>Complice</strong>
+       <img src="logo.png" alt="Logo Complice" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+        <div class="logo logo-fallback">C</div>
       </div>
     </div>
   </header>
@@ -153,7 +155,7 @@
       <h2>Réalisations</h2>
       <p class="muted" style="margin-top:6px">Aperçu de styles que nous pouvons créer (maquettes, exemples démo).</p>
       <div class="grid grid-3" style="margin-top:18px">
-        <div class="card"><div class="content"><div class="placeholder">Visuel / Post</div><div style="margin-top:8px" class="muted">Café — offre du midi</div></div></div>
+        <div class="card"><div class="content"><img src="real1.png"><style=\"width:100%;height:auto;max-height:400px;object-fit:cover;border-radius:12px;\"><div style="margin-top:8px" class="muted">Café — offre du midi</div></div></div>
         <div class="card"><div class="content"><div class="placeholder">Visuel / Story</div><div style="margin-top:8px" class="muted">Salon — avant / après</div></div></div>
         <div class="card"><div class="content"><div class="placeholder">Visuel / Reel</div><div style="margin-top:8px" class="muted">Boutique — nouveautés</div></div></div>
       </div>
@@ -181,7 +183,11 @@
 
   <footer id="footer">
     <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
-      <div style="display:flex;align-items:center;gap:10px"><div class="logo" style="width:28px;height:28px;border-radius:10px">C</div><span>Complice · Réseaux sociaux pour commerces locaux</span></div>
+       <div style="display:flex;align-items:center;gap:10px">
+        <img src="logo.png" alt="Logo Complice" class="logo-img" style="height:56px;width:auto;border-radius:10px;" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+        <div class="logo logo-fallback" style="width:28px;height:28px;border-radius:10px">C</div>
+        <span>Complice · Réseaux sociaux pour commerces locaux</span>
+      </div>
       <div style="display:flex;gap:14px;align-items:center">
         <span>📧 com.plice@zohomail.eu</span>
         <a class="btn btn-outline" href="https://www.instagram.com/com.plice.49/" target="_blank" rel="noopener">Instagram</a>
