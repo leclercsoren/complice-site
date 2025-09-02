@@ -29,6 +29,8 @@
     .btn-outline:hover{background:var(--accent);color:#fff}
     header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);backdrop-filter:saturate(120%) blur(6px);border-bottom:1px solid var(--border)}
     .logo{display:grid;place-items:center;width:36px;height:36px;border-radius:12px;background:var(--accent);color:#fff;font-weight:800}
+    .logo-img{height:72px;width:auto;display:block;border-radius:8px}
+    .logo-fallback{display:none}
     h1{font-size:clamp(2rem,3.8vw,3rem);line-height:1.1;margin:0}
     h2{font-size:clamp(1.5rem,2.6vw,2rem);margin:0}
     p{color:var(--muted)}
@@ -50,8 +52,6 @@
     form input, form textarea{width:100%;border:1px solid var(--border);border-radius:12px;padding:12px;background:#fff}
     form textarea{min-height:120px}
     .sr-only{position:absolute;left:-9999px}
-      .logo-img{height:36px;width:auto;display:block;border-radius:8px}
-    .logo-fallback{display:none}
   </style>
 </head>
 <body>
@@ -184,8 +184,11 @@
 
   <footer id="footer">
     <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
-      <div style="display:flex;align-items:center;gap:10px"><img src="logo.png" alt="Logo Complice" class="logo-img" style="height:28px;width:auto;border-radius:10px;" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
-        <div class="logo logo-fallback" style="width:28px;height:28px;border-radius:10px">C</div><span>Complice · Réseaux sociaux pour commerces locaux</span></div>
+      <div style="display:flex;align-items:center;gap:10px">
+        <img src="logo.png" alt="Logo Complice" class="logo-img" style="height:56px;width:auto;border-radius:10px;" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+        <div class="logo logo-fallback" style="width:28px;height:28px;border-radius:10px">C</div>
+        <span>Complice · Réseaux sociaux pour commerces locaux</span>
+      </div>
       <div style="display:flex;gap:14px;align-items:center">
         <span>📧 com.plice@zohomail.eu</span>
         <a class="btn btn-outline" href="https://www.instagram.com/com.plice.49/" target="_blank" rel="noopener">Instagram</a>
@@ -194,4 +197,5 @@
   </footer>
 </body>
 </html>
+
 
